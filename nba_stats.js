@@ -22,4 +22,8 @@ nba.data.teams({ year: '2018' }, (err, res) => {
     }
 
     fs.writeFileSync('teams.json', JSON.stringify(res, null, 2));
+
+    for (var i = 0; i < res.league.standard.length; i++){
+        console.log(res.league.standard[i].fullName)
+    }
 })
