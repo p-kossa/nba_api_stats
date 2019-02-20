@@ -1,0 +1,16 @@
+{
+  "name": "nba_api_stats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nba_stats.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-home:p-kossa/nba_api_stats.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
