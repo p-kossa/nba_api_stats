@@ -24,3 +24,15 @@ var get_teams =  nba.data.teams({ year: '2018' }).then(res => {
 get_teams.then(function(result) {
     console.log(result)
 })
+
+var get_standings = nba.data.standings({ date: 'current' }).then(res => {
+    fs.writeFileSync('standings.json', JSON.stringify(res, null, 2));
+
+    for (var i = 0; i < res.league.standard.teams.length; i++) {
+        
+    }
+})
+
+get_standings.then(function(result) {
+    console.log(result);
+})
