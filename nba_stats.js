@@ -3,7 +3,7 @@ const nba = require('nba.js').default;
 var fs = require('fs');
 
 // gets a list of dicts of team names and team ids
-nba.data.teams({ year: '2018' }).then(res => {
+var get_teams =  nba.data.teams({ year: '2018' }).then(res => {
     fs.writeFileSync('teams.json', JSON.stringify(res, null, 2));
 
     raw_data = [];
@@ -17,5 +17,10 @@ nba.data.teams({ year: '2018' }).then(res => {
         raw_data.push(dict);
     }
     let teams = [...new Set(raw_data)];
-    console.log(teams);
+    return teams;
+
 }).catch(err => console.error(err));
+
+get_teams.then(function(result) {
+    console.log(result)
+})
